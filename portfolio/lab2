@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lab 2 for Web GIS</title>
+<style>
+html { height:100% }
+body { height:100%; margin:0; padding:20px; font-family: Arial, sans-serif; }
+.map-container { 
+    height: 400px; 
+    width: 100%; 
+    max-width: 600px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+}
+</style>
+
+<!-- Google Maps JS API with working API Key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5U-lTv1hoJo_-ON8qVBXtEGXfZI80S7k"></script>
+
+<script>
+function initialize() {
+    // 1. Initial Interactive Map (Original Code)
+    new google.maps.Map(document.getElementById("map_canvas"), {
+        zoom: 16,
+        center: new google.maps.LatLng(35.306840, -80.732000),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+
+    // 2. Candler Park, Atlanta
+    new google.maps.Map(document.getElementById("map_candler_park"), {
+        zoom: 15,
+        center: new google.maps.LatLng(33.766870886063074, -84.3412533429238),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+
+    // 3. Ipanema, Rio De Janeiro, Brazil
+    new google.maps.Map(document.getElementById("map_ipanema"), {
+        zoom: 15,
+        center: new google.maps.LatLng(-22.98672454568992, -43.20626783956588),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+
+    // 4. PUC-Rio
+    new google.maps.Map(document.getElementById("map_puc_rio"), {
+        zoom: 16,
+        center: new google.maps.LatLng(-22.979670378415797, -43.23322151348878),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+
+    // 5. Provetá, Ilha Grande, Brazil
+    new google.maps.Map(document.getElementById("map_proveta"), {
+        zoom: 16,
+        center: new google.maps.LatLng(-23.18071688762601, -44.34268103120761),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+
+    // 6. Lençóis Maranhenses National Park, Maranhão, Brazil
+    new google.maps.Map(document.getElementById("map_lencois"), {
+        zoom: 14,
+        center: new google.maps.LatLng(-2.532024066949896, -43.10564090311088),
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+}
+</script>
+</head>
+<body onload="initialize()">
+
+<h1>Lab 2 for Web GIS</h1>
+<h3>Name: Sophia Gerz-Escandón</h3>
+
+<h3>Current Date is:</h3>
+<script type="text/javascript">
+document.write(Date());
+</script>
+
+<h3>Generate a random number:</h3>
+<script type="text/javascript">
+document.write(Math.random());
+</script>
+
+<h3>Define variables and perform calculation:</h3>
+<script>
+var str1 = "Hello World";
+document.write(str1);
+document.write("<br>");
+var x = 5;
+var y = 10;
+var z = x + y;
+document.write("x + y = " + z);
+document.write("<br><br>");
+</script>
+
+<h3>Multiplication Task (X1 * X2):</h3>
+<script type="text/javascript">
+var X1 = 200;
+var X2 = 300;
+var X3 = X1 * X2;
+document.write("X3 = X1 * X2 = " + X3);
+</script>
+
+<h3>Define a function</h3>
+<script type="text/javascript">
+function sum3(x1, x2, x3) {
+    var sum = x1 + x2 + x3;
+    return sum;
+}
+var k = sum3(5, 6, 7);
+document.write("sum3(5, 6, 7) = " + k);
+document.write("<br>");
+document.write("sum3(10, 20, 30) = " + sum3(10, 20, 30));
+</script>
+
+<h2>Interactive Web Maps</h2>
+
+<h3>Interactive Map (Google Maps)</h3>
+<div id="map_canvas" class="map-container"></div>
+
+<h3>Map of Candler Park, Atlanta (hometown)</h3>
+<div id="map_candler_park" class="map-container"></div>
+
+<h3>Map of Ipanema, Rio De Janeiro, Brazil</h3>
+<div id="map_ipanema" class="map-container"></div>
+
+<h3>Map of PUC-Rio (My Semester Exchange Host University)</h3>
+<div id="map_puc_rio" class="map-container"></div>
+
+<h3>Map of Provetá, Ilha Grande, Brazil</h3>
+<div id="map_proveta" class="map-container"></div>
+
+<h3>Map of Lençóis Maranhenses National Park, Maranhão, Brazil</h3>
+<div id="map_lencois" class="map-container"></div>
+
+</body>
+</html>
